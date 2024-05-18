@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Exploration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="background-container">
+        <img src="{{ url_for('static', filename='image.jpg') }}" alt="Description of the image" class="background-image">
+        <div class="container">
+            <h1>Exoplanet Exploration</h1>
+            <form id="predictionForm">
+                <label for="starTemperature">Star Temperature:</label>
+                <input type="number" id="starTemperature" name="star_temperature" required><br>
+            
+                <label for="starRadius">Star Radius:</label>
+                <input type="number" id="starRadius" name="star_radius" required><br>
+            
+                <label for="starLuminosity">Star Luminosity:</label>
+                <input type="number" id="starLuminosity" name="star_luminosity" required><br>
+                 
+                <label for="exoplanetOrbit">Exoplanet Orbit:</label>
+                <input type="number" id="exoplanetOrbit" name="exoplanet_orbit" required><br>
+                 
+                <label for="exoplanetMass">Exoplanet Mass:</label>
+                <input type="number" id="exoplanetMass" name="exoplanet_mass" required><br>
+                               
+                <label for="discoveryMethod">Discovery Method:</label>
+                <select id="discoveryMethod" name="discovery_method">
+                    <option value="Transit">Transit</option>
+                    <option value="Radial Velocity">Radial Velocity</option>
+                    <option value="Direct Imaging">Direct Imaging</option>
+                    <option value="Gravitational Microlensing">Gravitational Microlensing</option>
+                    <option value="Astrometry">Astrometry</option>
+                </select><br>            
+                <button type="submit">Predict</button>
+            </form>
+            <div id="predictions"></div>
+        </div>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <div class="buttons">
+            <button id="overviewBtn" class="top-right" onclick="openPage('overview.html')">Overview</button>
+            <button id="detectionMethodsBtn" class="top-right" onclick="openPage('detection_methods.html')">Detection Methods</button>
+            <button id="aboutBtn" class="top-right" onclick="openPage('about.html')">About</button>
+        </div>    
+    </div>
+</body>
+</html>
