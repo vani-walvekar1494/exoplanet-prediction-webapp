@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Change text color to a darker shade */
+    background-color: #f0f0f0; /* Set a light background color */
+} 
+
+/* Center the title */
+.container {
+    text-align: center;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Decorative styles for buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Optional: Add a subtle shadow effect to buttons */
+button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensures buttons are above everything else */
+}
+
+.top-right {
+    margin-bottom: 10px;
+    background-color: #4CAF50; /* Fallback color */
+    background-image: linear-gradient(45deg, #4CAF50, #2F8C4A); /* Gradient background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Adjust as needed */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.top-right:hover {
+    background-color: #45a049; /* Darker Green on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increased box shadow on hover */
+}
+
+/* Optional: Add text shadow for better contrast */
+.top-right span {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the main content container */
+.container {
+    position: relative; /* Ensures positioning relative to its parent */
+    max-width: 960px; /* Slightly larger than before for better readability */
+    margin: 50px auto; /* More vertical margin to distinguish it from other elements */
+    padding: 40px; /* Increased padding for a more spacious feel */
+    background: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for a 3D effect */
+    backdrop-filter: blur(10px); /* Blur effect for a frosted glass look */
+    color: #ffffff; /* Ensures text is bright white for contrast */
+    text-align: center; /* Center alignment for all content within */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to define edges */
+    overflow: hidden; /* Ensures no content spills out */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interactive effects */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover for depth */
+}
+
+/* Adding some styles to headings and paragraphs within the container for a more unified design */
+.container h1, .container p {
+    margin: 20px 0; /* Standardized margin for spacing */
+    font-weight: 300; /* Lighter font-weight for a modern look */
+    letter-spacing: 1px; /* Slight spacing to increase readability */
+}
+
+.container h1 {
+    font-size: 36px; /* Larger font size for headings */
+    color: #E3F2FD; /* A lighter shade of blue for a pop of color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+}
+
+/* Additional decorative styles for the background container */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    z-index: 0; /* This sets the stacking context for the background */
+    overflow: hidden; /* Ensures no overflow from this container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    position: absolute; /* Make sure the image is positioned absolutely within its container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1; /* Lower z-index so it stays in the background */
+}
+
+/* Styling for form inputs and labels */
+label {
+    display: block; /* Ensures the label is on its own line above the input */
+    margin-bottom: 5px; /* Space between the label and the input field */
+    font-size: 16px; /* Adequate size for readability */
+    font-weight: bold; /* Makes labels bold to distinguish from input text */
+    color: #E0F7FA; /* Ensures labels are visible against a darker background */
+}
+
+input, select {
+    width: 100%; /* Full width to maximize space */
+    padding: 12px; /* Ample padding for ease of use */
+    font-size: 16px; /* Legible text size */
+    border: 2px solid #B2EBF2; /* Subtle border styling */
+    border-radius: 5px; /* Rounded corners for modern appearance */
+    background-color: #ffffff; /* White background for contrast with text */
+    color: #333; /* Dark color for text for readability */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for interactive effects */
+}
+
+input:focus, select:focus {
+    border-color: #00BCD4; /* Highlight focus with a vibrant border color */
+    outline: none; /* Disabling default focus outline for a cleaner look */
+}
+
+/* Enhanced styling for the submit button */
+.form-group button[type="submit"] {
+    margin-top: 20px; /* Adds space above the button, pushing it down */
+    width: 100%; /* Full width of its container */
+    padding: 15px; /* Increased padding for better tactile interaction */
+    background-color: #007bff; /* Bright blue for visibility and style */
+    color: white; /* High contrast text color for readability */
+    border: none; /* Clean look without border */
+    border-radius: 8px; /* More pronounced rounded corners */
+    cursor: pointer; /* Cursor pointer to indicate clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+}
+
+
+.form-group button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover for visual feedback */
+}
+
+/* Styles for hidden elements */
+.hidden {
+    display: none; /* Ensures hidden elements are not visible or taking space */
+}
+
+/* Styling for text overlays for additional contextual information or effects */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 50px; /* Large text size for emphasis */
+}
+
+.text-overlay h2 {
+    margin-top: 20px; /* Space above h2 heading */
+}
+
+.text-overlay p {
+    margin: 10px 0; /* Standard margin for paragraphs to separate from other elements */
+}
